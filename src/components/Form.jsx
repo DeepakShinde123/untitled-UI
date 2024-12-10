@@ -1,8 +1,9 @@
 function form(){
     return(
         <div>
-            <form></form>
+            Form components
         </div>
     )
 }
 
+export default form;
