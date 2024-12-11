@@ -10,7 +10,7 @@ function Home() {
         <div className="col-span-2 hidden  md:block">
             <Aside />
         </div>
-        <div className="md:col-span-6 col-span-full">
+        <div className="md:col-span-6 col-span-full md:bg-lime-400 rounded-lg p-4 md:p-8">
             <Form />
         </div>
       </div>
