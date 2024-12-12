@@ -10,6 +10,19 @@ function Form() {
     services: [],
   });
 
+  const [selectServices, setSelectedServices] = useState([]);
+
+  const handleCheckbox = (value, checked) => {
+  setSelectedServices ((preState) => {
+    return checked
+    ? [...preState, value]
+    : preState.filter((state) => state !== value);
+  });
+};
+  
+
+  // const handleCheck = (value, index);
+
   const services = [
     "Website Design",
     "Content",
@@ -20,22 +33,14 @@ function Form() {
   ];
 
   const handleSubmit = (e) => {
-    console.log(formData);
     e.preventDefault();
+    console.log(selectServices);
   };
 
   const handleChange = (value, property) => {
     setFormData({ ...formData, [property]: value });
   };
 
-  const handleCheckbox = (value, checked) => {
-    if (checked) {
-      console.log(`Theek hai mein ${value} ko add kar dunga`);
-      return;
-    }
-
-    console.log(`Theek hai mein ${value} ko remove kar dunga`);
-  };
 
   return (
     <>
