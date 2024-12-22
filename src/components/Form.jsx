@@ -28,7 +28,7 @@ function Form() {
 
     console.log(formData);
 
-    fetch(utils.submiturl, {
+    fetch(utils.submitUrl, {
       method: "POST",
       mode: "no-cors",
       body: formData,
@@ -36,6 +36,7 @@ function Form() {
       console.log("Form Submitted", utils.entriesUrl);
     });
   };
+
   return (
     <>
       <Intro />
